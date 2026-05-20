@@ -11,9 +11,42 @@
             margin: 0;
             padding: 20px;
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: sans-serif;
+        }
+
+        /* Arama Çubuğu Alanı */
+        .search-container {
+            width: 100%;
+            max-width: 687px; /* Videoların dikey genişliğiyle eşit durması için */
+            margin-bottom: 25px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 16px;
+            background-color: #1e1e1e;
+            border: 2px solid #333;
+            border-radius: 30px;
+            color: #fff;
+            outline: none;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: #ff0000; /* YouTube kırmızısı odaklanma rengi */
+        }
+
+        /* Video Galeri Alanı */
+        .video-gallery {
+            display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
+            width: 100%;
         }
 
         /* Videoların telefon ekranına otomatik uyum sağlamasını sağlayan kural */
@@ -21,25 +54,58 @@
             border: 0;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            max-width: 100%; /* Telefon ekranında taşmayı önler, ekrana sığdırır */
+            max-width: 100%; /* Telefon ekranında taşmayı önler */
+            transition: opacity 0.3s ease;
         }
     </style>
 </head>
 <body>
 
-    <iframe width="687" height="1222" src="https://www.youtube.com/embed/Kll9fjT6o-0" title="Apple size nasıl en pahalı telefonunu aldırıyor? #shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Arama Çubuğu -->
+    <div class="search-container">
+        <input type="text" id="videoSearch" class="search-input" placeholder="Video ara...">
+    </div>
 
-    <iframe width="687" height="1222" src="https://www.youtube.com/embed/TUCMuq1Cryg" title="Görünmezlik Kazağı Mı Yoksa Oynatma Butonu Mu? 🧥▶️" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Video Galerisi -->
+    <div class="video-gallery" id="gallery">
+        <iframe width="687" height="1222" src="https://www.youtube.com/embed/Kll9fjT6o-0" title="Apple size nasıl en pahalı telefonunu aldırıyor? #shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-    <iframe width="687" height="1222" src="https://www.youtube.com/embed/7lulhjB3cSM" title="Mojang hates me 😭💔#usa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="687" height="1222" src="https://www.youtube.com/embed/TUCMuq1Cryg" title="Görünmezlik Kazağı Mı Yoksa Oynatma Butonu Mu? 🧥▶️" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-    <iframe width="687" height="1222" src="https://www.youtube.com/embed/oEBbPAkLGUo" title="The King of Roads: The Timeless Elegance of BMW in Speed and Beauty&quot;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="687" height="1222" src="https://www.youtube.com/embed/7lulhjB3cSM" title="Mojang hates me 😭💔#usa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-    <iframe width="687" height="1222" src="https://www.youtube.com/embed/z4_szAgNE14" title="try it Brah it's a trick 💀 #viral #trolledit #trollface #youtubeshorts #shortfeed #phonk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="687" height="1222" src="https://www.youtube.com/embed/oEBbPAkLGUo" title="The King of Roads: The Timeless Elegance of BMW in Speed and Beauty&quot;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-    <iframe width="687" height="1222" src="https://www.youtube.com/embed/Ai310JILjeE" title="#transition" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="687" height="1222" src="https://www.youtube.com/embed/z4_szAgNE14" title="try it Brah it&#39;s a trick 💀 #viral #trolledit #trollface #youtubeshorts #shortfeed #phonk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-    <iframe width="1840" height="1035" src="https://www.youtube.com/embed/vhIflsmWX5Y" title="ZENGİN 1.000.000 ELMAS BULDU! 😱 - Minecraft" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  
+        <iframe width="687" height="1222" src="https://www.youtube.com/embed/Ai310JILjeE" title="#transition" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <iframe width="1840" height="1035" src="https://www.youtube.com/embed/vhIflsmWX5Y" title="ZENGİN 1.000.000 ELMAS BULDU! 😱 - Minecraft" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <!-- Yeni videolarını doğrudan bu satırın altına yapıştırmaya devam edebilirsin -->
+    </div>
+
+    <!-- Anlık Filtreleme Yapan JavaScript Kodu -->
+    <script>
+        const searchInput = document.getElementById('videoSearch');
+        
+        searchInput.addEventListener('input', function() {
+            const filterValue = searchInput.value.toLowerCase();
+            // Her aramada listeyi güncel tutmak için iframe'leri dinamik seçiyoruz
+            const iframes = document.querySelectorAll('#gallery iframe');
+
+            iframes.forEach(iframe => {
+                const titleAttr = iframe.getAttribute('title');
+                const titleText = titleAttr ? titleAttr.toLowerCase() : "";
+                
+                if (titleText.includes(filterValue)) {
+                    iframe.style.display = "";
+                } else {
+                    iframe.style.display = "none";
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
